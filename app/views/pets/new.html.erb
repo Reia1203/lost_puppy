@@ -1,0 +1,12 @@
+
+<div class="container">
+  <%= simple_form_for(@pet) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :species, collection: %w(dog cat rabbit bird hamster)%>
+    <%= f.button :submit, "Create Pet", class: "btn btn-primary" %>
+  <% end %>
+    <div>
+      <%= link_to "Cancle", pets_path, class:"btn btn-warning" %>
+    </div>
+</div>

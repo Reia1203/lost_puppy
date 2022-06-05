@@ -1,0 +1,9 @@
+<h1>all lost pets</h1>
+<div class="container">
+  <% @pets.each do |pet| %>
+    <p><%= link_to pet.name, pet_path(pet) %></p>
+    <p><%= pet.address %></p>
+    <p><%= pet.species%></p>
+    <p><%= pet.found_on%></p>
+  <% end %>
+</div>

@@ -1,0 +1,13 @@
+<div class="container">
+  <h3><%= @pet.name %></h3>
+  <p><%= @pet.address %></p>
+  <p><%= @pet.species %></p>
+  <p><%= @pet.found_on %></p>
+  <div>
+    <%= link_to "Delete", pet_path(@pet),method: :delete, data:{confirm:"Are you sure?"},class: "btn btn-danger" %>
+    <%= link_to "Edit", edit_pet_path(@pet), class: "btn btn-warning"%>
+  </div>
+    <div>
+      <%= link_to "Back to home page", pets_path %>
+    </div>
+</div>

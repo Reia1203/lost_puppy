@@ -1,0 +1,12 @@
+<h1>edit</h1>
+<div class="container">
+  <%= simple_form_for(@pet) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :species %>
+    <%= f.button :submit, "Update", class: "btn btn-primary" %>
+  <% end %>
+  <div>
+    <%= link_to "Cancle", pet_path(@pet) %>
+  </div>
+</div>
